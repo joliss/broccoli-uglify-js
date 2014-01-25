@@ -1,4 +1,4 @@
-# broccoli-coffee
+# broccoli-uglify-js
 
 [UglifyJS2](https://github.com/mishoo/UglifyJS2) filter for Broccoli.
 
