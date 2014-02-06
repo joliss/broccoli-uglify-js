@@ -3,7 +3,8 @@ module.exports = function (broccoli) {
 
   UglifyJSFilter.prototype = Object.create(broccoli.Filter.prototype)
   UglifyJSFilter.prototype.constructor = UglifyJSFilter
-  function UglifyJSFilter (options) {
+  function UglifyJSFilter (inputTree, options) {
+    this.inputTree = inputTree
     this.options = options || {}
   }
 
@@ -20,5 +21,7 @@ module.exports = function (broccoli) {
     return result.code
   }
 
-  return UglifyJSFilter
+  return function (inputTree, options) {
+    return new UglifyJSFilter(inputTree, options)
+  }
 }

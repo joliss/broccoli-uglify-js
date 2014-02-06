@@ -5,20 +5,11 @@
 ## Usage
 
 ```js
-var UglifyJSFilter = require('broccoli-uglify-js')(broccoli);
-tree.addTransformer(new UglifyJSFilter);
+var uglifyJavaScript = require('broccoli-uglify-js')(broccoli);
+tree = uglifyJavaScript(tree, options);
 ```
 
 ### Options
-
-You can pass a hash of options to the `UglifyJSFilter` constructor, for
-instance
-
-```js
-new UglifyJSFilter({
-  mangle: false
-})
-```
 
 The following options are supported:
 
@@ -30,6 +21,10 @@ The following options are supported:
 
 * `output` (passed through to UglifyJS): pass an object to specify additional
   [output options](http://lisperator.net/uglifyjs/codegen)
+
+## To Do
+
+* Enable `ascii_only` by default
 
 ## Source Maps
 
