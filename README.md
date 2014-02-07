@@ -5,7 +5,7 @@
 ## Usage
 
 ```js
-var uglifyJavaScript = require('broccoli-uglify-js')(broccoli);
+var uglifyJavaScript = require('broccoli-uglify-js');
 tree = uglifyJavaScript(tree, options);
 ```
 
