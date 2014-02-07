@@ -1,5 +1,7 @@
 # master
 
+# 0.0.3
+
 * Do not require dependency-injecting broccoli
 
 # 0.0.2
