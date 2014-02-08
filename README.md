@@ -2,6 +2,12 @@
 
 [UglifyJS2](https://github.com/mishoo/UglifyJS2) filter for Broccoli.
 
+## Installation
+
+```bash
+npm install --save broccoli-uglify-js
+```
+
 ## Usage
 
 ```js
