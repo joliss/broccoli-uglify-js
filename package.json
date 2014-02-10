@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "uglify-js": "~2.4.11",
-    "broccoli": "0.0.10"
+    "broccoli": "0.0.12"
   }
 }
