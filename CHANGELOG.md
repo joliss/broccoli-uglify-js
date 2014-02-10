@@ -1,5 +1,7 @@
 # master
 
+# 0.0.4
+
 * Use `broccoli-filter` instead of `broccoli.Filter`
 
 # 0.0.3
