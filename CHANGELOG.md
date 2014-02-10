@@ -1,5 +1,7 @@
 # master
 
+* Use `broccoli-filter` instead of `broccoli.Filter`
+
 # 0.0.3
 
 * Do not require dependency-injecting broccoli

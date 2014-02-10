@@ -1,8 +1,8 @@
-var broccoli = require('broccoli')
+var Filter = require('broccoli-filter')
 var UglifyJS = require('uglify-js')
 
 module.exports = UglifyJSFilter
-UglifyJSFilter.prototype = Object.create(broccoli.Filter.prototype)
+UglifyJSFilter.prototype = Object.create(Filter.prototype)
 UglifyJSFilter.prototype.constructor = UglifyJSFilter
 function UglifyJSFilter (inputTree, options) {
   if (!(this instanceof UglifyJSFilter)) return new UglifyJSFilter(inputTree, options)
