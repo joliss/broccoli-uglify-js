@@ -9,6 +9,12 @@
     "type": "git",
     "url": "https://github.com/joliss/broccoli-uglify-js"
   },
+  "keywords": [
+    "broccoli-plugin",
+    "javascript",
+    "uglify",
+    "minify"
+  ],
   "dependencies": {
     "uglify-js": "~2.4.11",
     "broccoli-filter": "0.0.1"
