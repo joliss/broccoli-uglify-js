@@ -5,7 +5,7 @@
 ## Installation
 
 ```bash
-npm install --save broccoli-uglify-js
+npm install --save-dev broccoli-uglify-js
 ```
 
 ## Usage
