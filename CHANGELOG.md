@@ -1,5 +1,9 @@
 # master
 
+# 0.1.0
+
+* Bump version to allow for floating patch version
+
 # 0.0.4
 
 * Use `broccoli-filter` instead of `broccoli.Filter`
