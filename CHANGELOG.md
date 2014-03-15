@@ -1,5 +1,7 @@
 # master
 
+* Update broccoli-filter dependency
+
 # 0.1.0
 
 * Bump version to allow for floating patch version
