@@ -6,7 +6,7 @@ UglifyJSFilter.prototype = Object.create(Filter.prototype)
 UglifyJSFilter.prototype.constructor = UglifyJSFilter
 function UglifyJSFilter (inputTree, options) {
   if (!(this instanceof UglifyJSFilter)) return new UglifyJSFilter(inputTree, options)
-  this.inputTree = inputTree
+  Filter.call(this, inputTree, options)
   this.options = options || {}
 }
 
