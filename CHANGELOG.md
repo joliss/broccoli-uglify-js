@@ -1,5 +1,7 @@
 # master
 
+* Call base class constructor to enable broccoli-filter options
+
 # 0.1.1
 
 * Update broccoli-filter dependency
