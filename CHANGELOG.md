@@ -1,5 +1,7 @@
 # master
 
+* Update filter dependency to avoid hardlink issue
+
 # 0.1.2
 
 * Call base class constructor to enable broccoli-filter options
