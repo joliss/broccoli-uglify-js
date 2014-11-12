@@ -24,10 +24,6 @@ function UglifyJSFiles(inputTree, options) {
 
 util.inherits(UglifyJSFiles, Writer);
 
-UglifyJSFiles.prototype.cleanup = function () {
-    Writer.prototype.cleanup.apply(this, arguments);
-};
-
 UglifyJSFiles.prototype.write = function (readTree, destDir) {
     // Creates the output dir.
     mkdirp.sync(destDir);
@@ -46,7 +42,6 @@ UglifyJSFiles.prototype.write = function (readTree, destDir) {
             // checking for the file's extension.
             if (path.extname(relPath) === '.js') {
                 files.push(relPath);
-                return;
             }
 
             var srcPath  = path.join(srcDir, relPath),
@@ -64,22 +59,20 @@ UglifyJSFiles.prototype.write = function (readTree, destDir) {
 UglifyJSFiles.prototype.uglify = function (filePaths, srcDir, destDir) {
     filePaths.forEach(function (relPath) {
         var srcFile       = path.join(srcDir, relPath);
-        var destFile      = path.join(destDir, relPath);
+        var destFile      = path.join(destDir, path.dirname(relPath), path.basename(relPath, '.js') + '.min.js');
         var origSourceMap = fs.existsSync(srcFile + '.map');
 
         var config   = {
             mangle: this.options.mangle,
             compress: this.options.compress,
             sourceRoot: path.dirname(srcFile),
-            outSourceMap: path.basename(srcFile) + '.map',
-            sourceMapIncludeSources: origSourceMap || this.options.sourceMap,
+            outSourceMap: path.basename(destFile) + '.map',
+            sourceMapIncludeSources: origSourceMap,
             inSourceMap: origSourceMap && srcFile + '.map'
         };
 
         var output = UglifyJS.minify(srcFile, config);
         fs.writeFileSync(destFile, output.code, 'utf8');
-        if (this.options.sourceMap || config.inSourceMap) {
-            fs.writeFileSync(destFile + '.map', output.map, 'utf8');
-        }
+        fs.writeFileSync(destFile + '.map', output.map, 'utf8');
     }, this);
 };
