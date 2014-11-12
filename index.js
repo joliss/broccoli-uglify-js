@@ -4,7 +4,6 @@ var fs            = require('fs'),
     path          = require('path'),
     util          = require('util'),
     mkdirp        = require('mkdirp'),
-    quickTemp     = require('quick-temp'),
     symlinkOrCopy = require('symlink-or-copy'),
     walkSync      = require('walk-sync'),
     Writer        = require('broccoli-writer'),
@@ -26,12 +25,7 @@ function UglifyJSFiles(inputTree, options) {
 util.inherits(UglifyJSFiles, Writer);
 
 UglifyJSFiles.prototype.cleanup = function () {
-    quickTemp.remove(this, 'tmpCacheDir');
     Writer.prototype.cleanup.apply(this, arguments);
-};
-
-UglifyJSFiles.prototype.getCacheDir = function () {
-    return quickTemp.makeOrReuse(this, 'tmpCacheDir');
 };
 
 UglifyJSFiles.prototype.write = function (readTree, destDir) {
