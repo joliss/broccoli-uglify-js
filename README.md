@@ -15,6 +15,9 @@ var uglifyJavaScript = require('broccoli-uglify-js');
 tree = uglifyJavaScript(tree, options);
 ```
 
+As a result, the returned broccoli `tree` will contain extra `.min.js` and
+`.min.js.map` files for every `.js` file found in the input tree.
+
 ### Options
 
 The following options are supported:
@@ -34,4 +37,6 @@ The following options are supported:
 
 ## Source Maps
 
-Source maps are not yet supported.
+The `.min.js.map` file will be generated per `.js` in the input tree. If an
+existing map file (e.g.: `.js.map`) is detected for the file to uglify, the plugin
+will generate a composed source map to preserve previous transformations.
