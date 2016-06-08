@@ -1,5 +1,7 @@
 # master
 
+# 0.2.0
+
 * Upgrade to uglify-js ~2.6.2
 
 # 0.1.3
