@@ -1,5 +1,7 @@
 # master
 
+* Upgrade to uglify-js ~2.6.2
+
 # 0.1.3
 
 * Update filter dependency to avoid hardlink issue
