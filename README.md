@@ -1,5 +1,7 @@
 # broccoli-uglify-js
 
+**This package is deprecated in favor of [broccoli-uglify-sourcemap](https://github.com/ef4/broccoli-uglify-sourcemap).**
+
 [UglifyJS2](https://github.com/mishoo/UglifyJS2) filter for Broccoli.
 
 ## Installation
