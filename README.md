@@ -21,7 +21,7 @@ tree = uglifyJavaScript(tree, options);
 
 The following options are supported:
 
-* `mangle` (passed through to UglifyJS): pass `false` to skip mangling names
+* `mangle` (passed through to UglifyJS): pass `true` to mangle names
 
 * `compress` (passed through to UglifyJS): pass `false` to skip compressing;
   pass an object to specify [compressor
