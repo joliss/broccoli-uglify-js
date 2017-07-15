@@ -16,7 +16,7 @@
     "minify"
   ],
   "dependencies": {
-    "uglify-js": "~2.6.2",
-    "broccoli-filter": "^0.1.6"
+    "uglify-js": "~2.8.29",
+    "broccoli-filter": "^1.2.4"
   }
 }
